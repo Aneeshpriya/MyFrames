@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Address - MyFrames Precision Optics</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              dark: '#080E18',
+              navy: '#0B1320',
+              accent: '#B45309',
+              gold: '#C28935'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            serif: ['Cinzel', 'Georgia', 'serif'],
+            mono: ['JetBrains Mono', 'monospace']
+          }
+        }
+      }
+    };
+  </script>
+  <style>
+    body { background-color: #F8F9FA; color: #1E293B; font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; }
+    input::placeholder { color: #94A3B8; }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col selection:bg-slate-800 selection:text-white">
+  <!-- Announcement bar -->
+  <div class="bg-[#0B1320] text-[#94A3B8] border-b border-slate-800/80 text-[10.5px] font-mono tracking-wider py-2 px-4 sm:px-8">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-1.5">
+      <div class="flex items-center gap-2 tracking-widest text-slate-300">
+        <span class="w-1.5 h-1.5 rounded-full bg-cyan-400 inline-block animate-pulse"></span>
+        <span>TITAN OPTICAL LAB • CERTIFIED • TOLERANCE ±0.01MM • COMPLIMENTARY 1.60 HIGH-INDEX LENSES</span>
+      </div>
+      <div class="flex items-center gap-3 text-slate-400">
+        <span>FREE SHIPPING US &amp; INDIA</span><span>•</span>
+        <span class="text-cyan-400 font-semibold tracking-widest">ISO 13485 ACCREDITED</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <header class="bg-white border-b border-slate-200/90 sticky top-0 z-40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8 h-20 flex items-center justify-between gap-6">
+      <a aria-label="MyFrames Home" class="flex items-center gap-3 shrink-0" href="/">
+        <div class="w-10 h-10 rounded-full bg-[#0B1320] text-white flex items-center justify-center font-serif text-sm tracking-wider font-semibold border border-slate-700 shadow-sm">TF</div>
+        <div class="flex flex-col">
+          <span class="font-serif tracking-tight font-bold text-xl text-slate-900 leading-none">MyFrames</span>
+          <span class="text-[9px] font-mono tracking-[0.25em] text-slate-400 uppercase mt-0.5">Precision Optics</span>
+        </div>
+      </a>
+      <nav class="hidden md:flex items-center gap-8 pl-4">
+        <a class="text-xs font-semibold tracking-wider text-slate-700 hover:text-slate-950 uppercase" href="/">Eyeglasses</a>
+      </nav>
+      <div class="flex-1 max-w-xl mx-2 hidden sm:block">
+        <div class="relative w-full">
+          <span class="absolute inset-y-0 left-0 flex items-center pl-4 pointer-events-none text-slate-400">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+          </span>
+          <input class="w-full bg-slate-50 hover:bg-slate-100/70 focus:bg-white text-xs pl-11 pr-4 py-2.5 rounded-full border border-slate-200 focus:outline-none focus:ring-1 focus:ring-slate-400 focus:border-slate-400 transition" placeholder="Search Titan, Hexagonal, Round, Panto..." type="text">
+        </div>
+      </div>
+      <div class="flex items-center gap-6 shrink-0 text-slate-700">
+        <a class="relative flex flex-col items-center gap-1 group" href="#" title="Wishlist">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path></svg>
+          <span class="text-[10px] tracking-wide font-medium hidden lg:inline">WISHLIST</span>
+        </a>
+       <a class="flex flex-col items-center group relative text-gray-700 hover:text-black" href="#">
+<div class="relative">
+<svg class="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path>
+</svg>
+
+</div>
+<span class="text-[9px] font-medium tracking-tight text-gray-500 mt-0.5">CART</span>
+</a>
+        <a class="flex items-center gap-2 pl-2 border-l border-slate-200 group text-slate-800" href="/profile">
+          <div class="w-7 h-7 rounded-full bg-slate-100 flex items-center justify-center border border-slate-300">
+            <svg class="w-4 h-4 text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+          </div>
+          <span class="text-xs font-semibold tracking-wide">Profile</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main content -->
+  <main class="flex-grow py-8 px-4 sm:px-8 max-w-5xl mx-auto w-full">
+    <div class="flex flex-wrap items-center justify-between text-[11px] font-semibold tracking-wider text-slate-400 mb-6 gap-2">
+      <a class="text-slate-600 hover:text-slate-950 flex items-center gap-1.5 transition font-semibold" href="/addresses"><span>←</span> BACK TO MY ADDRESSES</a>
+    </div>
+
+    <div class="mb-8 flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-slate-200/80 pb-6">
+      <div>
+        <h1 class="text-3xl sm:text-4xl font-serif text-slate-900 tracking-tight font-medium">Add Address</h1>
+        <p class="text-slate-500 text-sm mt-1 max-w-xl">Add a delivery address for your optical orders.</p>
+      </div>
+    </div>
+
+    <div class="bg-white rounded-3xl border border-slate-200 shadow-sm p-6 sm:p-10 mb-8">
+      <div class="flex items-center justify-between pb-6 mb-8 border-b border-slate-100">
+        <div>
+          <h2 class="text-lg font-serif font-semibold text-slate-900 tracking-tight">Delivery Address</h2>
+          <p class="text-xs text-slate-400 mt-0.5">Enter your delivery details</p>
+        </div>
+      </div>
+
+      <form id="address-form" class="space-y-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+            <label for="fullName" class="block text-xs font-semibold uppercase tracking-wider text-slate-600 mb-2">Full Name <span class="text-red-500">*</span></label>
+            <div class="flex items-center bg-[#F1F3F5] rounded-full border border-slate-200/60 px-4 py-2.5 focus-within:ring-2 focus-within:ring-slate-400 focus-within:bg-white transition">
+              <svg class="w-4 h-4 text-slate-400 mr-3 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+              <input id="fullName" name="fullName" type="text" placeholder="Enter your full name" required autocomplete="name" class="w-full bg-transparent border-none p-0 text-sm font-medium text-slate-800 focus:outline-none focus:ring-0">
+            </div>
+          </div>
+          <div>
+            <div class="flex items-center justify-between mb-2">
+              <label for="phoneNumber" class="text-xs font-semibold uppercase tracking-wider text-slate-600">Phone Number <span class="text-red-500">*</span></label>
+              <span class="text-[10px] font-mono tracking-wider text-slate-400 uppercase">Contact number</span>
+            </div>
+            <div class="flex items-center bg-[#F1F3F5] rounded-full border border-slate-200/60 px-3 py-2.5 focus-within:ring-2 focus-within:ring-slate-400 focus-within:bg-white transition">
+              <span class="bg-white/80 border border-slate-200/80 px-2.5 py-1 rounded-full text-xs font-semibold text-slate-700 mr-2 shrink-0">+91</span>
+              <input id="phoneNumber" name="phoneNumber" type="tel" placeholder="Enter phone number" required autocomplete="tel" class="w-full bg-transparent border-none p-0 text-sm font-medium text-slate-800 tracking-wide focus:outline-none focus:ring-0">
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <label for="houseName" class="block text-xs font-semibold uppercase tracking-wider text-slate-600 mb-2">House / Flat / Building <span class="text-red-500">*</span></label>
+          <div class="flex items-center bg-[#F1F3F5] rounded-full border border-slate-200/60 px-4 py-2.5 focus-within:ring-2 focus-within:ring-slate-400 focus-within:bg-white transition">
+            <input id="houseName" name="houseName" type="text" placeholder="House name, flat or building" required class="w-full bg-transparent border-none p-0 text-sm font-medium text-slate-800 focus:outline-none focus:ring-0">
+          </div>
+        </div>
+
+        <div>
+          <label for="street" class="block text-xs font-semibold uppercase tracking-wider text-slate-600 mb-2">Street Address / Locality <span class="text-red-500">*</span></label>
+          <div class="flex items-center bg-[#F1F3F5] rounded-full border border-slate-200/60 px-4 py-2.5 focus-within:ring-2 focus-within:ring-slate-400 focus-within:bg-white transition">
+            <input id="street" name="street" type="text" placeholder="Enter street or locality" required autocomplete="street-address" class="w-full bg-transparent border-none p-0 text-sm font-medium text-slate-800 focus:outline-none focus:ring-0">
+          </div>
+        </div>
+
+        <div>
+          <label for="landmark" class="block text-xs font-semibold uppercase tracking-wider text-slate-600 mb-2">Landmark <span class="text-slate-400 text-[10px] font-normal lowercase">(optional)</span></label>
+          <div class="flex items-center bg-[#F1F3F5] rounded-full border border-slate-200/60 px-4 py-2.5 focus-within:ring-2 focus-within:ring-slate-400 focus-within:bg-white transition">
+            <input id="landmark" name="landmark" type="text" placeholder="Nearby landmark (optional)" class="w-full bg-transparent border-none p-0 text-sm font-medium text-slate-800 focus:outline-none focus:ring-0">
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+            <label for="pincode" class="block text-xs font-semibold uppercase tracking-wider text-slate-600 mb-2">PIN Code <span class="text-red-500">*</span></label>
+            <div class="flex items-center bg-[#F1F3F5] rounded-full border border-slate-200/60 px-4 py-2.5 focus-within:ring-2 focus-within:ring-slate-400 focus-within:bg-white transition">
+              <input id="pincode" name="pincode" type="text" inputmode="numeric" placeholder="Enter PIN code" required autocomplete="postal-code" class="w-full bg-transparent border-none p-0 text-sm font-medium text-slate-800 focus:outline-none focus:ring-0">
+            </div>
+          </div>
+          <div>
+            <label for="city" class="block text-xs font-semibold uppercase tracking-wider text-slate-600 mb-2">City <span class="text-red-500">*</span></label>
+            <div class="flex items-center bg-[#F1F3F5] rounded-full border border-slate-200/60 px-4 py-2.5 focus-within:ring-2 focus-within:ring-slate-400 focus-within:bg-white transition">
+              <input id="city" name="city" type="text" placeholder="Enter city" required autocomplete="address-level2" class="w-full bg-transparent border-none p-0 text-sm font-medium text-slate-800 focus:outline-none focus:ring-0">
+            </div>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+            <label for="state" class="block text-xs font-semibold uppercase tracking-wider text-slate-600 mb-2">State <span class="text-red-500">*</span></label>
+            <div class="flex items-center bg-[#F1F3F5] rounded-full border border-slate-200/60 px-4 py-2.5 focus-within:ring-2 focus-within:ring-slate-400 focus-within:bg-white transition">
+              <input id="state" name="state" type="text" placeholder="Enter state" required autocomplete="address-level1" class="w-full bg-transparent border-none p-0 text-sm font-medium text-slate-800 focus:outline-none focus:ring-0">
+            </div>
+          </div>
+          <div>
+            <label for="country" class="block text-xs font-semibold uppercase tracking-wider text-slate-600 mb-2">Country <span class="text-red-500">*</span></label>
+            <div class="bg-[#F1F3F5] rounded-full border border-slate-200/60 px-4 py-2.5 focus-within:ring-2 focus-within:ring-slate-400 focus-within:bg-white transition">
+              <select id="country" name="country" required class="w-full bg-transparent border-none p-0 text-sm font-medium text-slate-800 focus:outline-none focus:ring-0">
+                <option value="">Select Country</option>
+                <option value="India">India</option>
+                <option value="United States">United States</option>
+                <option value="United Kingdom">United Kingdom</option>
+                <option value="Singapore">Singapore</option>
+                <option value="Germany">Germany</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="pt-2">
+          <label class="block text-xs font-semibold uppercase tracking-wider text-slate-600 mb-3">Address Type <span class="text-red-500">*</span></label>
+          <div class="flex flex-wrap gap-3">
+            <label class="flex items-center gap-2 px-5 py-2.5 rounded-full text-xs font-semibold cursor-pointer transition bg-neutral-900 text-white shadow-sm">
+              <input class="accent-amber-600" name="addressType" type="radio" value="Home" checked required>
+              <span>Home</span>
+            </label>
+            <label class="flex items-center gap-2 px-5 py-2.5 rounded-full text-xs font-medium cursor-pointer transition bg-white border border-slate-300 text-slate-700 hover:border-slate-400">
+              <input class="accent-amber-600" name="addressType" type="radio" value="Work">
+              <span>Work</span>
+            </label>
+            <label class="flex items-center gap-2 px-5 py-2.5 rounded-full text-xs font-medium cursor-pointer transition bg-white border border-slate-300 text-slate-700 hover:border-slate-400">
+              <input class="accent-amber-600" name="addressType" type="radio" value="Other">
+              <span>Other</span>
+            </label>
+          </div>
+        </div>
+
+        <div id="form-message" class="hidden text-sm rounded-xl px-4 py-3" role="alert"></div>
+
+        <div class="pt-8 border-t border-slate-100 flex flex-col sm:flex-row items-center justify-end gap-4">
+          <div class="flex items-center gap-3 w-full sm:w-auto">
+            <button class="flex-1 sm:flex-none px-6 py-2.5 rounded-full text-xs font-semibold tracking-wider uppercase bg-slate-100 text-slate-700 hover:bg-slate-200 transition text-center" type="button" onclick="window.location.href='/addresses'">Cancel</button>
+            <button id="save-address-btn" class="flex-1 sm:flex-none px-7 py-2.5 rounded-full text-xs font-semibold tracking-wider uppercase bg-[#1E293B] text-white hover:bg-black transition shadow flex items-center justify-center gap-2" type="submit">
+              <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path></svg>
+              <span>Save Address</span>
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-[#0B1320] text-slate-300 pt-16 pb-12 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-slate-800/80">
+        <div class="lg:col-span-2 space-y-4">
+          <div class="flex items-center gap-2 font-serif text-xl tracking-tight text-white font-medium"><span>TF MyFrames</span></div>
+          <p class="text-xs text-slate-400 leading-relaxed max-w-sm">Medical-grade titanium and hand-carved cellulose acetate frames. Engineered with sub-millimeter precision in our certified optical research facility.</p>
+          <div class="flex flex-wrap items-center gap-2 pt-2">
+            <span class="px-2.5 py-1 rounded bg-slate-900 border border-slate-800 text-[9px] font-mono text-cyan-400 tracking-wider font-semibold">ISO 13485 CERTIFIED</span>
+            <span class="px-2.5 py-1 rounded bg-slate-900 border border-slate-800 text-[9px] font-mono text-cyan-400 tracking-wider font-semibold">CLASS 1 MEDICAL DEVICE</span>
+          </div>
+        </div>
+        <div>
+          <h3 class="text-xs font-mono tracking-widest text-slate-100 uppercase mb-4 font-semibold">Lab Engineering</h3>
+          <ul class="space-y-2.5 text-xs text-slate-400">
+            <li><a class="hover:text-white transition" href="#">Ti-811 Beta Titanium</a></li>
+            <li><a class="hover:text-white transition" href="#">Refractive Index Profiling</a></li>
+            <li><a class="hover:text-white transition" href="#">Laser Axis Calibration</a></li>
+            <li><a class="hover:text-white transition" href="#">Digital Free-Form Surfacing</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-xs font-mono tracking-widest text-slate-100 uppercase mb-4 font-semibold">Customer Support</h3>
+          <ul class="space-y-2.5 text-xs text-slate-400">
+            <li><a class="hover:text-white transition" href="#">Optometrist Video Consultation</a></li>
+            <li><a class="hover:text-white transition" href="#">Pupillary Distance Tool</a></li>
+            <li><a class="hover:text-white transition" href="#">International Freight &amp; Duties</a></li>
+            <li><a class="hover:text-white transition" href="#">Atelier Warranty &amp; Tune-ups</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-xs font-mono tracking-widest text-slate-100 uppercase mb-4 font-semibold">Optical Journal</h3>
+          <p class="text-xs text-slate-400 leading-relaxed mb-3">Receive monograph updates on ophthalmic engineering and bespoke frame silhouettes.</p>
+          <form class="flex items-center bg-slate-900 border border-slate-800 rounded-lg p-1" onsubmit="event.preventDefault();">
+            <input class="w-full bg-transparent border-none text-xs text-slate-200 placeholder-slate-500 focus:outline-none focus:ring-0 px-2.5 py-1.5 font-mono" placeholder="optics@atelier.com" type="email">
+            <button class="px-3.5 py-1.5 bg-[#C27803] hover:bg-[#D98205] text-white text-[10px] font-bold tracking-wider rounded uppercase transition shrink-0" type="submit">Join</button>
+          </form>
+        </div>
+      </div>
+      <div class="pt-8 flex flex-col md:flex-row items-center justify-between text-[11px] text-slate-500 gap-4">
+        <div>© 2026 TF MyFrames Precision Optics. All rights reserved.</div>
+        <div class="flex items-center gap-6">
+          <a class="hover:text-slate-300 transition" href="#">Medical Privacy &amp; HIPAA</a>
+          <a class="hover:text-slate-300 transition" href="#">Terms of Bespoke Service</a>
+          <a class="hover:text-slate-300 transition" href="#">Laboratory Standards</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const addressForm = document.getElementById('address-form');
+    const messageBox = document.getElementById('form-message');
+    const saveButton = document.getElementById('save-address-btn');
+
+    addressForm.addEventListener('submit', async (event) => {
+      event.preventDefault();
+
+      messageBox.classList.add('hidden');
+      saveButton.disabled = true;
+      saveButton.classList.add('opacity-60', 'cursor-not-allowed');
+
+      const formData = new FormData(addressForm);
+      const addressData = Object.fromEntries(formData.entries());
+
+      try {
+        const response = await fetch('/api/users/add-address', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          credentials: 'include',
+          body: JSON.stringify(addressData)
+        });
+
+        const result = await response.json();
+
+        if (!response.ok || !result.success) {
+          throw new Error(result.message || 'Failed to add address. Please check your details.');
+        }
+
+        alert('Address added successfully!');
+        window.location.href = '/addresses';
+      } catch (error) {
+        console.error('Add address error:', error);
+        messageBox.textContent = error.message || 'Something went wrong. Please try again.';
+        messageBox.className = 'text-sm rounded-xl px-4 py-3 bg-red-50 text-red-700 border border-red-200';
+      } finally {
+        saveButton.disabled = false;
+        saveButton.classList.remove('opacity-60', 'cursor-not-allowed');
+      }
+    });
+  </script>
+</body>
+</html>

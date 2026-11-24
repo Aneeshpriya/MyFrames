@@ -1,0 +1,842 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>MyFrames Precision | Optical Atelier</title>
+<!-- Google Fonts Preconnect & Stylesheets -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..700;1,400..700&amp;family=Hanken+Grotesk:ital,wght@0,300..900;1,300..900&amp;family=JetBrains+Mono:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+<!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration -->
+<script data-purpose="tailwind-config">
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ['"EB Garamond"', 'serif'],
+            sans: ['"Hanken Grotesk"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          colors: {
+            atelier: {
+              canvas: '#fbfbfa',
+              card: '#ffffff',
+              border: '#e7e5e4',
+              subtle: '#78716c',
+              dark: '#0c0f12',
+              teal: '#0d9488',
+              tealDark: '#042f2e',
+              amber: '#b45309'
+            }
+          }
+        }
+      }
+    }
+  </script>
+<!-- Custom Typography & Micro-styles -->
+<style data-purpose="typography">
+    body {
+      font-family: 'Hanken Grotesk', sans-serif;
+      background-color: #faf9f7;
+      color: #1c1917;
+      -webkit-font-smoothing: antialiased;
+    }
+    .font-mono-spec {
+      font-family: 'JetBrains Mono', monospace;
+    }
+    .font-display {
+      font-family: 'EB Garamond', serif;
+    }
+  </style>
+<!-- Section styling details -->
+<style data-purpose="custom-decorations">
+    .badge-dot::before {
+      content: '';
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      border-radius: 9999px;
+      background-color: #0d9488;
+      margin-right: 6px;
+    }
+    .lens-glow {
+      box-shadow: inset 0 0 40px rgba(13, 148, 136, 0.04);
+    }
+  </style>
+</head>
+<body class="bg-[#faf9f7] text-stone-900 selection:bg-teal-900 selection:text-teal-50">
+<!-- BEGIN: TopNotificationBar -->
+<div class="bg-[#0b0f19] text-[#94a3b8] text-[10px] tracking-wider uppercase font-medium py-1.5 px-4 border-b border-gray-800" data-purpose="announcement-strip">
+<div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
+<div class="flex items-center space-x-2">
+<span class="inline-block w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+<span>TITAN OPTICAL LAB • CERTIFIED • TOLERANCE ±0.01MM • COMPLIMENTARY 1.60 HIGH-INDEX LENSES</span>
+</div>
+<div class="flex items-center space-x-2">
+<span>FREE SHIPPING US &amp; INDIA • ISO 13485 ACCREDITED</span>
+</div>
+</div>
+</div>
+<!-- END: TopNotificationBar -->
+<!-- BEGIN: MainHeader -->
+<header class="bg-white border-b border-gray-200 sticky top-0 z-50">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
+<!-- Brand Logo & Main Nav -->
+<div class="flex items-center space-x-6 flex-shrink-0">
+<a class="flex items-center space-x-2.5" href="#">
+<div class="w-8 h-8 rounded-full bg-black text-white flex items-center justify-center font-bold text-xs tracking-tighter">
+            TF
+          </div>
+<div>
+<div class="font-serif font-bold text-base tracking-tight text-gray-900 leading-none">MyFrames</div>
+<div class="text-[8px] tracking-[0.2em] uppercase font-semibold text-gray-400 leading-tight">PRECISION OPTICS</div>
+</div>
+</a>
+<!-- Eyeglasses dropdown -->
+<button class="hidden md:flex items-center space-x-1 text-xs font-semibold tracking-wider text-gray-800 hover:text-black uppercase" type="button">
+<span>EYEGLASSES</span>
+<svg class="w-3.5 h-3.5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<!-- Search Bar -->
+<div class="flex-1 max-w-xl mx-2 hidden sm:block">
+<div class="relative">
+<div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-gray-400">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<input class="w-full pl-10 pr-4 py-2 bg-gray-50 border border-gray-200 rounded-full text-xs placeholder-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-800 focus:bg-white transition-colors" placeholder="Search Titan, Hexagonal, Round, Panto..." type="text">
+</div>
+</div>
+<!-- Customer Icons (Wishlist, Cart, Profile) -->
+<div class="flex items-center space-x-4 sm:space-x-6 flex-shrink-0">
+<!-- Wishlist -->
+<a class="flex flex-col items-center group relative text-gray-700 hover:text-black" href="#">
+<div class="relative">
+<svg class="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path>
+</svg>
+
+</div>
+<span class="text-[9px] font-medium tracking-tight text-gray-500 mt-0.5">WISHLIST</span>
+</a>
+<!-- Cart -->
+<a class="flex flex-col items-center group relative text-gray-700 hover:text-black" href="#">
+<div class="relative">
+<svg class="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path>
+</svg>
+
+</div>
+<span class="text-[9px] font-medium tracking-tight text-gray-500 mt-0.5">CART</span>
+</a>
+<!-- Profile -->
+<a class="flex flex-col items-center group text-gray-700 hover:text-black" href="/profile">
+<svg class="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path>
+</svg>
+<span class="text-[9px] font-medium tracking-tight text-gray-500 mt-0.5">PROFILE</span>
+</a>
+</div>
+</div>
+</header>
+<!-- END: MainHeader -->
+<main>
+<!-- BEGIN: HeroSection -->
+<section class="relative pt-10 pb-16 lg:pt-14 lg:pb-24 border-b border-stone-200/80 overflow-hidden bg-gradient-to-b from-stone-50 via-white to-stone-50" data-purpose="hero-optical-atelier">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+<!-- Hero Left Column: Copy & Specs -->
+<div class="lg:col-span-6 space-y-6">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal-50 border border-teal-200/70 text-teal-800 text-[10px] font-mono-spec tracking-widest uppercase">
+<span class="w-1.5 h-1.5 rounded-full bg-teal-600"></span>
+              AERO GRADE 316L • ±0.01MM ACCURACY
+            </div>
+<h1 class="text-4xl sm:text-5xl lg:text-6xl font-serif font-medium tracking-tight text-stone-950 leading-[1.1]">
+              Precision Optical <br>
+<span class="italic font-light text-teal-900">Architecture.</span>
+</h1>
+<p class="text-stone-600 text-sm sm:text-base leading-relaxed max-w-xl">
+              Nordic slate minimalism meets aerospace-grade Titan metallurgy. Ergonomically calibrated frames surfaced with blue-attenuating ophthalmic precision.
+            </p>
+<!-- Metrics Highlight Cards -->
+<div class="grid grid-cols-3 gap-3 pt-2 max-w-lg">
+<div class="p-3.5 bg-white border border-stone-200 rounded-lg shadow-xs">
+<div class="text-base sm:text-lg font-mono-spec font-bold text-stone-900">7.4g</div>
+<div class="text-[10px] font-mono-spec text-stone-500 uppercase mt-0.5">Featherweight 316L</div>
+</div>
+<div class="p-3.5 bg-white border border-stone-200 rounded-lg shadow-xs">
+<div class="text-base sm:text-lg font-mono-spec font-bold text-stone-900">±0.25°</div>
+<div class="text-[10px] font-mono-spec text-stone-500 uppercase mt-0.5">Surfaced Alignment</div>
+</div>
+<div class="p-3.5 bg-white border border-stone-200 rounded-lg shadow-xs">
+<div class="text-base sm:text-lg font-mono-spec font-bold text-stone-900">99.1%</div>
+<div class="text-[10px] font-mono-spec text-stone-500 uppercase mt-0.5">Biocompatible</div>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="flex flex-wrap items-center gap-3 pt-3">
+<a class="px-6 py-3.5 bg-stone-950 hover:bg-stone-800 text-white text-xs font-mono-spec tracking-wider uppercase rounded-md transition shadow-sm inline-flex items-center gap-2 group" href="#new-arrivals">
+<span>Continue Shopping</span>
+<span class="group-hover:translate-x-0.5 transition-transform">→</span>
+</a>
+<button class="px-5 py-3.5 bg-white hover:bg-stone-100 text-stone-800 border border-stone-300 text-xs font-mono-spec tracking-wider uppercase rounded-md transition">
+                3D Frame Inspector
+              </button>
+</div>
+</div>
+<!-- Hero Right Column: Studio Showcase Card -->
+<div class="lg:col-span-6">
+<div class="bg-white border border-stone-200/90 rounded-2xl p-5 sm:p-6 shadow-xl shadow-stone-200/40 relative">
+<div class="flex items-center justify-between text-[11px] font-mono-spec text-stone-400 mb-4 pb-2 border-b border-stone-100">
+<span class="text-teal-700 font-medium">ATELIER MODEL // TITAN-01-HEX</span>
+<span>TOL. ±0.01 mm</span>
+</div>
+<!-- Dual Frame & Editorial Presentation -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 items-center">
+<div class="relative rounded-xl overflow-hidden aspect-[4/5] bg-stone-100 group">
+<img alt="Model wearing titanium prescription optical eyeglasses" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700" src="https://static5.lenskart.com/media/uploads/desktop-home/category/eyeglasses-hero.png">
+<div class="absolute bottom-3 left-3 bg-stone-900/80 backdrop-blur text-white text-[9px] font-mono-spec px-2 py-0.5 rounded uppercase tracking-wider">
+                    Studio Port. 01/25
+                  </div>
+</div>
+<div class="flex flex-col justify-between h-full bg-[#fdfdfc] p-4 rounded-xl border border-stone-100">
+<div class="relative aspect-[4/3] flex items-center justify-center p-2">
+<img alt="Architectural Hexagonal Steel frame product shot" class="max-h-full max-w-full object-contain filter drop-shadow-md hover:scale-105 transition duration-300" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZ1oFvJjz5uWoJr3gMenbhwzy_wZOmHaUcT5Q_I9rK4QBuVDLS4mj2arg&s=10">
+<span class="absolute top-1 right-1 text-[9px] font-mono-spec text-teal-800 bg-teal-50 border border-teal-200/70 px-1.5 py-0.5 rounded">
+                      316L Aviator-Hex
+                    </span>
+</div>
+<div class="mt-4 pt-3 border-t border-stone-100">
+<div class="text-xs font-semibold text-stone-900">Architectural Hexagonal Steel</div>
+<div class="text-[10px] font-mono-spec text-stone-500 mt-0.5">Titanium Metallurgy • High-Index 1.67 Rx</div>
+<div class="mt-2 flex items-center justify-between">
+<span class="text-sm font-bold font-mono-spec text-stone-900">₹2,699</span>
+<span class="text-[10px] font-mono-spec text-teal-700 bg-teal-50 px-2 py-0.5 rounded">Rx Ready Included</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Sub-specs ribbon -->
+<div class="mt-4 pt-3 border-t border-stone-100 flex items-center justify-between text-[10px] font-mono-spec text-stone-400">
+<span>REF: TX-90823-SILVER</span>
+<span class="text-stone-500">SURFACE COAT: ANTI-REFLECTIVE EMERALD</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: HeroSection -->
+<!-- BEGIN: NewTechArrivalsSection -->
+<section class="py-16 bg-[#fcfbf9] border-b border-stone-200/80" data-purpose="new-arrivals-grid" id="new-arrivals">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<!-- Section Header -->
+<div class="flex flex-col md:flex-row md:items-end justify-between pb-8 mb-8 border-b border-stone-200 gap-4">
+<div>
+<div class="text-[10px] font-mono-spec uppercase tracking-widest text-teal-700 mb-1 badge-dot">
+              SURGICAL TITUS • UPON 2025
+            </div>
+<h2 class="text-2xl sm:text-3xl font-serif font-medium text-stone-900">New Tech Arrivals</h2>
+<p class="text-xs sm:text-sm text-stone-500 mt-1">Single-vision &amp; Progressive surfaced prescription chassis.</p>
+</div>
+<div>
+<a class="text-xs font-mono-spec text-teal-800 hover:text-teal-950 tracking-wider uppercase underline underline-offset-4 flex items-center gap-1" href="#">
+<span>OPTICAL ALL 2025 ALLOCATION (COMPLIMENTARY)</span>
+<span>→</span>
+</a>
+</div>
+</div>
+<!-- 4-Column Product Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Product Card 1 -->
+<article class="bg-white border border-stone-200 rounded-xl p-4 flex flex-col justify-between hover:border-stone-400 transition-all duration-200 group">
+<div>
+<div class="flex items-center justify-between text-[10px] font-mono-spec text-stone-400 mb-2">
+<span class="text-teal-700 bg-teal-50 px-1.5 py-0.5 rounded font-medium">ULTRA-THIN ACETATE</span>
+<span>51-17-142</span>
+</div>
+<div class="h-44 flex items-center justify-center p-2 bg-stone-50/50 rounded-lg group-hover:bg-stone-50 transition-colors">
+<img alt="Titan Classic Rectangle Eyeglasses" class="max-h-full max-w-full object-contain filter group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTyi32B7N5SZuJc2mngJrlaxdy46WlcU6w3sYFN9ASvc7WgdNNqrQdwHuyXrDCGaIZtNU49fLDkezPKgQPzmA13bkb2lDJ606_0AOdmnS6qZMLpoKCbGhHMhXMubD25uVScPYXrmwVmZK6GwfV0lOg7tRbtUN08V0n7l6mjjUUWueSYju38D1_pec1ivmQEivSPhrOuF81nio5zkkNqAkho9JJ6rbfj3ydL4wPZ_NU5PuEzIGXBw">
+</div>
+<div class="mt-4">
+<h3 class="text-sm font-semibold text-stone-900">Titan Classic Rectangle Eyeglasses</h3>
+<p class="text-[11px] font-mono-spec text-stone-500 mt-0.5">Titan Acetate • Prescription Dual-Tint</p>
+</div>
+</div>
+<div class="mt-4 pt-3 border-t border-stone-100">
+<div class="flex items-center justify-between mb-3">
+<span class="text-sm font-bold font-mono-spec text-stone-900">₹2,499</span>
+<span class="text-[10px] font-mono-spec text-teal-700">Anti-Reflect Included</span>
+</div>
+<div class="grid grid-cols-2 gap-2">
+<button class="py-2 text-[11px] font-mono-spec uppercase border border-stone-300 text-stone-700 rounded hover:bg-stone-100 transition">Details</button>
+<button class="py-2 text-[11px] font-mono-spec uppercase bg-stone-900 text-white rounded hover:bg-stone-800 transition">Add Rx</button>
+</div>
+</div>
+</article>
+<!-- Product Card 2 -->
+<article class="bg-white border border-stone-200 rounded-xl p-4 flex flex-col justify-between hover:border-stone-400 transition-all duration-200 group">
+<div>
+<div class="flex items-center justify-between text-[10px] font-mono-spec text-stone-400 mb-2">
+<span class="text-stone-600 bg-stone-100 px-1.5 py-0.5 rounded font-medium">CLASSIC PANTO</span>
+<span>49-20-145</span>
+</div>
+<div class="h-44 flex items-center justify-center p-2 bg-stone-50/50 rounded-lg group-hover:bg-stone-50 transition-colors">
+<img alt="Two-Tone Havana Panto" class="max-h-full max-w-full object-contain filter group-hover:scale-105 transition-transform duration-300" src="https://cdn.fynd.com/v2/falling-surf-7c8bb8/fyprod/wrkr/products/pictures/item/free/original/000000000494623155/6Mdys97XVMK-1.jpg?dpr=1">
+</div>
+<div class="mt-4">
+<h3 class="text-sm font-semibold text-stone-900">Two-Tone Havana Panto</h3>
+<p class="text-[11px] font-mono-spec text-stone-500 mt-0.5">Titanium Skeleton • Natural Tortoise Accent</p>
+</div>
+</div>
+<div class="mt-4 pt-3 border-t border-stone-100">
+<div class="flex items-center justify-between mb-3">
+<span class="text-sm font-bold font-mono-spec text-stone-900">₹2,699</span>
+<span class="text-[10px] font-mono-spec text-teal-700">BlueCut Lenses</span>
+</div>
+<div class="grid grid-cols-2 gap-2">
+<button class="py-2 text-[11px] font-mono-spec uppercase border border-stone-300 text-stone-700 rounded hover:bg-stone-100 transition">Details</button>
+<button class="py-2 text-[11px] font-mono-spec uppercase bg-stone-900 text-white rounded hover:bg-stone-800 transition">Add Rx</button>
+</div>
+</div>
+</article>
+<!-- Product Card 3 -->
+<article class="bg-white border border-stone-200 rounded-xl p-4 flex flex-col justify-between hover:border-stone-400 transition-all duration-200 group">
+<div>
+<div class="flex items-center justify-between text-[10px] font-mono-spec text-stone-400 mb-2">
+<span class="text-amber-800 bg-amber-50 px-1.5 py-0.5 rounded font-medium">ROSE 316L TITAN</span>
+<span>48-21-140</span>
+</div>
+<div class="h-44 flex items-center justify-center p-2 bg-stone-50/50 rounded-lg group-hover:bg-stone-50 transition-colors">
+<img alt="Rose Gold Titanium Round" class="max-h-full max-w-full object-contain filter group-hover:scale-105 transition-transform duration-300" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGMLwov2MZdrAWuqvXzOqMRh7RZcsmmglAEbA_I11JzA&s=10">
+</div>
+<div class="mt-4">
+<h3 class="text-sm font-semibold text-stone-900">Rose Gold Titanium Round</h3>
+<p class="text-[11px] font-mono-spec text-stone-500 mt-0.5">Titan 300 Series • Hypoallergenic Wire</p>
+</div>
+</div>
+<div class="mt-4 pt-3 border-t border-stone-100">
+<div class="flex items-center justify-between mb-3">
+<span class="text-sm font-bold font-mono-spec text-stone-900">₹2,799</span>
+<span class="text-[10px] font-mono-spec text-teal-700">Anti-Scratch Coating</span>
+</div>
+<div class="grid grid-cols-2 gap-2">
+<button class="py-2 text-[11px] font-mono-spec uppercase border border-stone-300 text-stone-700 rounded hover:bg-stone-100 transition">Details</button>
+<button class="py-2 text-[11px] font-mono-spec uppercase bg-stone-900 text-white rounded hover:bg-stone-800 transition">Add Rx</button>
+</div>
+</div>
+</article>
+<!-- Product Card 4 -->
+<article class="bg-white border border-stone-200 rounded-xl p-4 flex flex-col justify-between hover:border-stone-400 transition-all duration-200 group">
+<div>
+<div class="flex items-center justify-between text-[10px] font-mono-spec text-stone-400 mb-2">
+<span class="text-emerald-800 bg-emerald-50 px-1.5 py-0.5 rounded font-medium">OLIVE BROWLINE</span>
+<span>53-18-145</span>
+</div>
+<div class="h-44 flex items-center justify-center p-2 bg-stone-50/50 rounded-lg group-hover:bg-stone-50 transition-colors">
+<img alt="Classic Browline Tortoise" class="max-h-full max-w-full object-contain filter group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTyi32B7N5SZuJc2mngJrlaxdy46WlcU6w3sYFN9ASvc7WgdNNqrQdwHuyXrDCGaIZtNU49fLDkezPKgQPzmA13bkb2lDJ606_0AOdmnS6qZMLpoKCbGhHMhXMubD25uVScPYXrmwVmZK6GwfV0lOg7tRbtUN08V0n7l6mjjUUWueSYju38D1_pec1ivmQEivSPhrOuF81nio5zkkNqAkho9JJ6rbfj3ydL4wPZ_NU5PuEzIGXBw">
+</div>
+<div class="mt-4">
+<h3 class="text-sm font-semibold text-stone-900">Classic Browline Tortoise</h3>
+<p class="text-[11px] font-mono-spec text-stone-500 mt-0.5">Titan Structure • Reinforced Rivets</p>
+</div>
+</div>
+<div class="mt-4 pt-3 border-t border-stone-100">
+<div class="flex items-center justify-between mb-3">
+<span class="text-sm font-bold font-mono-spec text-stone-900">₹2,599</span>
+<span class="text-[10px] font-mono-spec text-teal-700">UV400 Surfaced</span>
+</div>
+<div class="grid grid-cols-2 gap-2">
+<button class="py-2 text-[11px] font-mono-spec uppercase border border-stone-300 text-stone-700 rounded hover:bg-stone-100 transition">Details</button>
+<button class="py-2 text-[11px] font-mono-spec uppercase bg-stone-900 text-white rounded hover:bg-stone-800 transition">Add Rx</button>
+</div>
+</div>
+</article>
+</div>
+</div>
+</section>
+<!-- END: NewTechArrivalsSection -->
+<!-- BEGIN: SpectaclesByAudienceSection -->
+<section class="py-16 bg-white border-b border-stone-200/80" data-purpose="audience-demographics">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<!-- Header -->
+<div class="mb-10">
+<div class="text-[10px] font-mono-spec uppercase tracking-widest text-teal-700 mb-1 badge-dot">
+            ANATOMICAL FIT PROFILES • POPULATION METRICS
+          </div>
+<h2 class="text-2xl sm:text-3xl font-serif font-medium text-stone-900">Spectacles by Audience</h2>
+<p class="text-xs sm:text-sm text-stone-500 mt-1 max-w-2xl">
+            Calibrated bridge widths and nose pad geometry tailored for specific ergonomic cranial profiles.
+          </p>
+</div>
+<!-- 3 Cards Layout -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Men's Optical Line -->
+<div class="group relative rounded-2xl border border-stone-200 bg-stone-900 overflow-hidden flex flex-col justify-end min-h-[420px] shadow-sm">
+<img alt="Men's Optical Line" class="absolute inset-0 w-full h-full object-cover object-center opacity-85 group-hover:scale-105 transition-transform duration-700" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQcbsSv6oQAcO3HwLGrxM3S0JWC5mUWOPnqcX1eqWHEw&s=10">
+<div class="absolute inset-0 bg-gradient-to-t from-stone-950 via-stone-950/60 to-transparent"></div>
+<div class="relative p-6 text-white z-10">
+<div class="text-[10px] font-mono-spec text-teal-300 uppercase tracking-widest mb-1.5">
+                TEMPLE 145-150MM • CRANIAL PROFILE A
+              </div>
+<h3 class="text-xl font-serif font-semibold text-white">Men's Optical Line</h3>
+<p class="text-xs text-stone-300 mt-2 leading-relaxed font-light">
+                Architectural silhouettes, rhodium-plated, calibrated for wider temples and higher facial coverage.
+              </p>
+<div class="mt-5 pt-3 border-t border-stone-700/60 flex items-center justify-between">
+<span class="text-[10px] font-mono-spec text-stone-400">SIZES: 52 - 58 mm</span>
+<a class="px-3.5 py-1.5 bg-white text-stone-900 text-xs font-mono-spec uppercase rounded hover:bg-stone-200 transition" href="#mens">
+                  Explore Men →
+                </a>
+</div>
+</div>
+</div>
+<!-- Women's Optical Line -->
+<div class="group relative rounded-2xl border border-stone-200 bg-stone-900 overflow-hidden flex flex-col justify-end min-h-[420px] shadow-sm">
+<img alt="Women's Optical Line" class="absolute inset-0 w-full h-full object-cover object-center opacity-85 group-hover:scale-105 transition-transform duration-700" src="https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/1080x1080/9df78eab33525d08d6e5fb8d27136e95//o/i/rose-gold-full-rim-round-owndays-titanium-od-e50079-eyeglasses_226191_3_29_09_2025.png">
+<div class="absolute inset-0 bg-gradient-to-t from-stone-950 via-stone-950/60 to-transparent"></div>
+<div class="relative p-6 text-white z-10">
+<div class="text-[10px] font-mono-spec text-teal-300 uppercase tracking-widest mb-1.5">
+                TEMPLE 138-142MM • CRANIAL PROFILE B
+              </div>
+<h3 class="text-xl font-serif font-semibold text-white">Women's Optical Line</h3>
+<p class="text-xs text-stone-300 mt-2 leading-relaxed font-light">
+                Featherweight rose gold wireframes, cat-eye lifts, and panto styles crafted for medium cranial profiles.
+              </p>
+<div class="mt-5 pt-3 border-t border-stone-700/60 flex items-center justify-between">
+<span class="text-[10px] font-mono-spec text-stone-400">SIZES: 48 - 53 mm</span>
+<a class="px-3.5 py-1.5 bg-white text-stone-900 text-xs font-mono-spec uppercase rounded hover:bg-stone-200 transition" href="#womens">
+                  Explore Women →
+                </a>
+</div>
+</div>
+</div>
+<!-- Kids' Opti-Flex Line -->
+<div class="group relative rounded-2xl border border-stone-200 bg-stone-900 overflow-hidden flex flex-col justify-end min-h-[420px] shadow-sm">
+<img alt="Kids' Opti-Flex Line" class="absolute inset-0 w-full h-full object-cover object-center opacity-85 group-hover:scale-105 transition-transform duration-700" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiiDc1Jii-X26F1ZVkbwvNJapcxi3Q-MZFtzjjCkR7mg&s=10">
+<div class="absolute inset-0 bg-gradient-to-t from-stone-950 via-stone-950/60 to-transparent"></div>
+<div class="relative p-6 text-white z-10">
+<div class="text-[10px] font-mono-spec text-teal-300 uppercase tracking-widest mb-1.5">
+                TR90 FLEX MEMORY • JUNIOR FIT
+              </div>
+<h3 class="text-xl font-serif font-semibold text-white">Kids' Opti-Flex Line</h3>
+<p class="text-xs text-stone-300 mt-2 leading-relaxed font-light">
+                Medical TR90 polymers, ultra-soft silicone temple tips, and impact-resistant shatterproof clear ophthalmic lenses.
+              </p>
+<div class="mt-5 pt-3 border-t border-stone-700/60 flex items-center justify-between">
+<span class="text-[10px] font-mono-spec text-stone-400">SIZES: 44 - 48 mm</span>
+<a class="px-3.5 py-1.5 bg-white text-stone-900 text-xs font-mono-spec uppercase rounded hover:bg-stone-200 transition" href="#kids">
+                  Explore Kids →
+                </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: SpectaclesByAudienceSection -->
+<!-- BEGIN: ShopByFrameShapeSection -->
+<section class="py-16 bg-[#fcfbf9] border-b border-stone-200/80" data-purpose="geometric-classification">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="mb-10">
+<div class="text-[10px] font-mono-spec uppercase tracking-widest text-teal-700 mb-1 badge-dot">
+            GEOMETRIC CLASSIFICATION
+          </div>
+<h2 class="text-2xl sm:text-3xl font-serif font-medium text-stone-900">Shop by Frame Shape</h2>
+<p class="text-xs sm:text-sm text-stone-500 mt-1">
+            Smart architectural silhouettes categorized by ocular aperture and face geometry.
+          </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Shape Card 1: Rectangle -->
+<div class="bg-white border border-stone-200 p-6 rounded-xl hover:border-stone-400 transition-all duration-200 flex flex-col justify-between group">
+<div>
+<div class="flex justify-between items-center text-[10px] font-mono-spec text-stone-400 mb-6">
+<span>ARTICLE 01</span>
+<span>TOL. ±0.012</span>
+</div>
+<div class="h-28 flex items-center justify-center mb-6">
+<!-- Geometric Rectangle Vector Wireframe -->
+<div class="w-32 h-16 border-2 border-stone-400 rounded-sm flex items-center justify-center group-hover:border-stone-900 group-hover:bg-stone-50 transition-all">
+<span class="text-[9px] font-mono-spec text-stone-400">54 □ 16</span>
+</div>
+</div>
+<h3 class="text-lg font-serif font-semibold text-stone-900">Rectangle Frames</h3>
+<p class="text-xs text-stone-600 mt-2 leading-relaxed">
+                Crisp, authoritative lines. Best suited for round and oval faces needing structured optical definition.
+              </p>
+</div>
+<div class="mt-6 pt-4 border-t border-stone-100 flex items-center justify-between text-xs font-mono-spec">
+<span class="text-stone-400">View Specs</span>
+<a class="text-teal-800 hover:text-stone-950 font-medium" href="#">View Rectangles →</a>
+</div>
+</div>
+<!-- Shape Card 2: Round & Panto -->
+<div class="bg-white border border-stone-200 p-6 rounded-xl hover:border-stone-400 transition-all duration-200 flex flex-col justify-between group">
+<div>
+<div class="flex justify-between items-center text-[10px] font-mono-spec text-stone-400 mb-6">
+<span>ARTICLE 02</span>
+<span>TOL. ±0.010</span>
+</div>
+<div class="h-28 flex items-center justify-center mb-6">
+<!-- Geometric Round Wireframe -->
+<div class="w-20 h-20 border-2 border-stone-400 rounded-full flex items-center justify-center group-hover:border-stone-900 group-hover:bg-stone-50 transition-all">
+<span class="text-[9px] font-mono-spec text-stone-400">48 ○ 20</span>
+</div>
+</div>
+<h3 class="text-lg font-serif font-semibold text-stone-900">Round &amp; Panto Frames</h3>
+<p class="text-xs text-stone-600 mt-2 leading-relaxed">
+                Gentle curves and classic geometry suited to angular or square jawlines seeking softened elegance.
+              </p>
+</div>
+<div class="mt-6 pt-4 border-t border-stone-100 flex items-center justify-between text-xs font-mono-spec">
+<span class="text-stone-400">View Specs</span>
+<a class="text-teal-800 hover:text-stone-950 font-medium" href="#">View Rounds →</a>
+</div>
+</div>
+<!-- Shape Card 3: Cat-Eye & Hexagonal -->
+<div class="bg-white border border-stone-200 p-6 rounded-xl hover:border-stone-400 transition-all duration-200 flex flex-col justify-between group">
+<div>
+<div class="flex justify-between items-center text-[10px] font-mono-spec text-stone-400 mb-6">
+<span>ARTICLE 03</span>
+<span>TOL. ±0.015</span>
+</div>
+<div class="h-28 flex items-center justify-center mb-6">
+<!-- Geometric Hexagon Vector Wireframe -->
+<div class="w-28 h-18 border-2 border-stone-400 rounded-lg transform -skew-x-6 flex items-center justify-center group-hover:border-stone-900 group-hover:bg-stone-50 transition-all">
+<span class="text-[9px] font-mono-spec text-stone-400 skew-x-6">51 ⬡ 18</span>
+</div>
+</div>
+<h3 class="text-lg font-serif font-semibold text-stone-900">Cat-Eye &amp; Hexagonal</h3>
+<p class="text-xs text-stone-600 mt-2 leading-relaxed">
+                Subtle geometric elevation and angular perimeters sculpted for high-aesthetic distinction &amp; cheekbone definition.
+              </p>
+</div>
+<div class="mt-6 pt-4 border-t border-stone-100 flex items-center justify-between text-xs font-mono-spec">
+<span class="text-stone-400">View Specs</span>
+<a class="text-teal-800 hover:text-stone-950 font-medium" href="#">View High Geometric →</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: ShopByFrameShapeSection -->
+<!-- BEGIN: FeaturedEyeglassesSection -->
+<section class="py-16 bg-white border-b border-stone-200/80" data-purpose="optical-inventory-grid">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<!-- Grid Header & Material Filter Tabs -->
+<div class="flex flex-col md:flex-row md:items-end justify-between pb-8 mb-8 border-b border-stone-200 gap-4">
+<div>
+<div class="text-[10px] font-mono-spec uppercase tracking-widest text-teal-700 mb-1 badge-dot">
+              PRECISION OPTICAL INVENTORY
+            </div>
+<h2 class="text-2xl sm:text-3xl font-serif font-medium text-stone-900">Featured Eyeglasses</h2>
+<p class="text-xs sm:text-sm text-stone-500 mt-1">Single-vision index 1.60 and anti-glare coatings included with every frame.</p>
+</div>
+
+
+</div>
+<!-- 8 Product Grid (4x2) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Item 1 -->
+<div class="bg-white border border-stone-200 rounded-xl p-4 flex flex-col justify-between hover:border-stone-400 transition-all duration-200 group">
+<div>
+<div class="flex items-center justify-between text-[10px] font-mono-spec text-stone-400 mb-2">
+<span class="text-teal-700 bg-teal-50 px-1.5 py-0.5 rounded">316L ALLOY</span>
+<span>49-20-145</span>
+</div>
+<div class="h-44 flex items-center justify-center p-2 bg-stone-50 rounded-lg">
+<img alt="Two-Tone Havana Panto" class="max-h-full max-w-full object-contain filter group-hover:scale-105 transition-transform duration-300" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRbRAPAGe4iHH-o5K8NnUAy_ckZxqKvZjX50VNv0_m7w&s=10">
+</div>
+<div class="mt-4">
+<h3 class="text-sm font-semibold text-stone-900">Two-Tone Havana Panto</h3>
+<p class="text-[11px] font-mono-spec text-stone-500 mt-0.5">Titan Skeleton • Handcrafted Italian Acetate</p>
+</div>
+</div>
+<div class="mt-4 pt-3 border-t border-stone-100">
+<div class="flex items-center justify-between mb-3">
+<span class="text-sm font-bold font-mono-spec text-stone-900">₹2,499</span>
+<span class="text-[10px] font-mono-spec text-stone-500">Lens Included</span>
+</div>
+<div class="grid grid-cols-2 gap-2">
+<button class="py-2 text-[11px] font-mono-spec uppercase border border-stone-300 text-stone-700 rounded hover:bg-stone-100">Details</button>
+<button class="py-2 text-[11px] font-mono-spec uppercase bg-stone-900 text-white rounded hover:bg-stone-800">Add Rx</button>
+</div>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="bg-white border border-stone-200 rounded-xl p-4 flex flex-col justify-between hover:border-stone-400 transition-all duration-200 group">
+<div>
+<div class="flex items-center justify-between text-[10px] font-mono-spec text-stone-400 mb-2">
+<span class="text-amber-800 bg-amber-50 px-1.5 py-0.5 rounded">ROSE GOLD</span>
+<span>48-21-140</span>
+</div>
+<div class="h-44 flex items-center justify-center p-2 bg-stone-50 rounded-lg">
+<img alt="Rose Gold Titanium Round" class="max-h-full max-w-full object-contain filter group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTyi32B7N5SZuJc2mngJrlaxdy46WlcU6w3sYFN9ASvc7WgdNNqrQdwHuyXrDCGaIZtNU49fLDkezPKgQPzmA13bkb2lDJ606_0AOdmnS6qZMLpoKCbGhHMhXMubD25uVScPYXrmwVmZK6GwfV0lOg7tRbtUN08V0n7l6mjjUUWueSYju38D1_pec1ivmQEivSPhrOuF81nio5zkkNqAkho9JJ6rbfj3ydL4wPZ_NU5PuEzIGXBw">
+</div>
+<div class="mt-4">
+<h3 class="text-sm font-semibold text-stone-900">Rose Gold Titanium Round</h3>
+<p class="text-[11px] font-mono-spec text-stone-500 mt-0.5">Titanium Structure • Japanese Rim Wire</p>
+</div>
+</div>
+<div class="mt-4 pt-3 border-t border-stone-100">
+<div class="flex items-center justify-between mb-3">
+<span class="text-sm font-bold font-mono-spec text-stone-900">₹2,799</span>
+<span class="text-[10px] font-mono-spec text-stone-500">Lens Included</span>
+</div>
+<div class="grid grid-cols-2 gap-2">
+<button class="py-2 text-[11px] font-mono-spec uppercase border border-stone-300 text-stone-700 rounded hover:bg-stone-100">Details</button>
+<button class="py-2 text-[11px] font-mono-spec uppercase bg-stone-900 text-white rounded hover:bg-stone-800">Add Rx</button>
+</div>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="bg-white border border-stone-200 rounded-xl p-4 flex flex-col justify-between hover:border-stone-400 transition-all duration-200 group">
+<div>
+<div class="flex items-center justify-between text-[10px] font-mono-spec text-stone-400 mb-2">
+<span class="text-stone-700 bg-stone-100 px-1.5 py-0.5 rounded">BROWLINE</span>
+<span>52-19-145</span>
+</div>
+<div class="h-44 flex items-center justify-center p-2 bg-stone-50 rounded-lg">
+<img alt="Amber Havana Browline" class="max-h-full max-w-full object-contain filter group-hover:scale-105 transition-transform duration-300" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQjB8j9iy53T4WaGHRHQvyJw7vNUZIgAt24v31EmCGsw&s">
+</div>
+<div class="mt-4">
+<h3 class="text-sm font-semibold text-stone-900">Amber Havana Browline</h3>
+<p class="text-[11px] font-mono-spec text-stone-500 mt-0.5">Titan Construct • 18K Rhodium Accent</p>
+</div>
+</div>
+<div class="mt-4 pt-3 border-t border-stone-100">
+<div class="flex items-center justify-between mb-3">
+<span class="text-sm font-bold font-mono-spec text-stone-900">₹2,899</span>
+<span class="text-[10px] font-mono-spec text-stone-500">Lens Included</span>
+</div>
+<div class="grid grid-cols-2 gap-2">
+<button class="py-2 text-[11px] font-mono-spec uppercase border border-stone-300 text-stone-700 rounded hover:bg-stone-100">Details</button>
+<button class="py-2 text-[11px] font-mono-spec uppercase bg-stone-900 text-white rounded hover:bg-stone-800">Add Rx</button>
+</div>
+</div>
+</div>
+<!-- Item 4 -->
+<div class="bg-white border border-stone-200 rounded-xl p-4 flex flex-col justify-between hover:border-stone-400 transition-all duration-200 group">
+<div>
+<div class="flex items-center justify-between text-[10px] font-mono-spec text-stone-400 mb-2">
+<span class="text-cyan-800 bg-cyan-50 px-1.5 py-0.5 rounded font-medium">ULTRA RIMLESS</span>
+<span>50-18-140</span>
+</div>
+<div class="h-44 flex items-center justify-center p-2 bg-stone-50 rounded-lg">
+<img alt="Minimalist Rimless Titanium" class="max-h-full max-w-full object-contain filter group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTyi32B7N5SZuJc2mngJrlaxdy46WlcU6w3sYFN9ASvc7WgdNNqrQdwHuyXrDCGaIZtNU49fLDkezPKgQPzmA13bkb2lDJ606_0AOdmnS6qZMLpoKCbGhHMhXMubD25uVScPYXrmwVmZK6GwfV0lOg7tRbtUN08V0n7l6mjjUUWueSYju38D1_pec1ivmQEivSPhrOuF81nio5zkkNqAkho9JJ6rbfj3ydL4wPZ_NU5PuEzIGXBw">
+</div>
+<div class="mt-4">
+<h3 class="text-sm font-semibold text-stone-900">Minimalist Rimless Titanium</h3>
+<p class="text-[11px] font-mono-spec text-stone-500 mt-0.5">Titan Spoke Mount • 0.9mm Flex Wire</p>
+</div>
+</div>
+<div class="mt-4 pt-3 border-t border-stone-100">
+<div class="flex items-center justify-between mb-3">
+<span class="text-sm font-bold font-mono-spec text-stone-900">₹3,199</span>
+<span class="text-[10px] font-mono-spec text-stone-500">1.67 Rx Free</span>
+</div>
+<div class="grid grid-cols-2 gap-2">
+<button class="py-2 text-[11px] font-mono-spec uppercase border border-stone-300 text-stone-700 rounded hover:bg-stone-100">Details</button>
+<button class="py-2 text-[11px] font-mono-spec uppercase bg-stone-900 text-white rounded hover:bg-stone-800">Add Rx</button>
+</div>
+</div>
+</div>
+<!-- Item 5 -->
+<div class="bg-white border border-stone-200 rounded-xl p-4 flex flex-col justify-between hover:border-stone-400 transition-all duration-200 group">
+<div>
+<div class="flex items-center justify-between text-[10px] font-mono-spec text-stone-400 mb-2">
+<span class="text-teal-700 bg-teal-50 px-1.5 py-0.5 rounded">RESIN ACETATE</span>
+<span>53-17-145</span>
+</div>
+<div class="h-44 flex items-center justify-center p-2 bg-stone-50 rounded-lg">
+<img alt="Olive Green Acetate Square" class="max-h-full max-w-full object-contain filter group-hover:scale-105 transition-transform duration-300" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLbm8LbVAY0dQhUapjE4rqJmqgJEJH51b4lp7RspDFhg&s=10">
+</div>
+<div class="mt-4">
+<h3 class="text-sm font-semibold text-stone-900">Olive Green Acetate Square</h3>
+<p class="text-[11px] font-mono-spec text-stone-500 mt-0.5">Clean Fusion • Beveled Face Rim</p>
+</div>
+</div>
+<div class="mt-4 pt-3 border-t border-stone-100">
+<div class="flex items-center justify-between mb-3">
+<span class="text-sm font-bold font-mono-spec text-stone-900">₹2,399</span>
+<span class="text-[10px] font-mono-spec text-stone-500">Lens Included</span>
+</div>
+<div class="grid grid-cols-2 gap-2">
+<button class="py-2 text-[11px] font-mono-spec uppercase border border-stone-300 text-stone-700 rounded hover:bg-stone-100">Details</button>
+<button class="py-2 text-[11px] font-mono-spec uppercase bg-stone-900 text-white rounded hover:bg-stone-800">Add Rx</button>
+</div>
+</div>
+</div>
+<!-- Item 6 -->
+<div class="bg-white border border-stone-200 rounded-xl p-4 flex flex-col justify-between hover:border-stone-400 transition-all duration-200 group">
+<div>
+<div class="flex items-center justify-between text-[10px] font-mono-spec text-stone-400 mb-2">
+<span class="text-stone-700 bg-stone-100 px-1.5 py-0.5 rounded">HEX WIRE</span>
+<span>51-19-142</span>
+</div>
+<div class="h-44 flex items-center justify-center p-2 bg-stone-50 rounded-lg">
+<img alt="Architectural Hexagonal Steel" class="max-h-full max-w-full object-contain filter group-hover:scale-105 transition-transform duration-300" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhSJBLOx1ssAhAv_YZznzlmOoRMPmaPSnzKb694bQXiQ&s=10">
+</div>
+<div class="mt-4">
+<h3 class="text-sm font-semibold text-stone-900">Architectural Hexagonal Steel</h3>
+<p class="text-[11px] font-mono-spec text-stone-500 mt-0.5">Titan Skeleton • Diamond Silver Rim</p>
+</div>
+</div>
+<div class="mt-4 pt-3 border-t border-stone-100">
+<div class="flex items-center justify-between mb-3">
+<span class="text-sm font-bold font-mono-spec text-stone-900">₹2,699</span>
+<span class="text-[10px] font-mono-spec text-stone-500">Lens Included</span>
+</div>
+<div class="grid grid-cols-2 gap-2">
+<button class="py-2 text-[11px] font-mono-spec uppercase border border-stone-300 text-stone-700 rounded hover:bg-stone-100">Details</button>
+<button class="py-2 text-[11px] font-mono-spec uppercase bg-stone-900 text-white rounded hover:bg-stone-800">Add Rx</button>
+</div>
+</div>
+</div>
+<!-- Item 7 -->
+<div class="bg-white border border-stone-200 rounded-xl p-4 flex flex-col justify-between hover:border-stone-400 transition-all duration-200 group">
+<div>
+<div class="flex items-center justify-between text-[10px] font-mono-spec text-stone-400 mb-2">
+<span class="text-teal-700 bg-teal-50 px-1.5 py-0.5 rounded">CRYSTAL CAT</span>
+<span>52-16-140</span>
+</div>
+<div class="h-44 flex items-center justify-center p-2 bg-stone-50 rounded-lg">
+<img alt="Architectural Crystal Cat-Eye" class="max-h-full max-w-full object-contain filter group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTyi32B7N5SZuJc2mngJrlaxdy46WlcU6w3sYFN9ASvc7WgdNNqrQdwHuyXrDCGaIZtNU49fLDkezPKgQPzmA13bkb2lDJ606_0AOdmnS6qZMLpoKCbGhHMhXMubD25uVScPYXrmwVmZK6GwfV0lOg7tRbtUN08V0n7l6mjjUUWueSYju38D1_pec1ivmQEivSPhrOuF81nio5zkkNqAkho9JJ6rbfj3ydL4wPZ_NU5PuEzIGXBw">
+</div>
+<div class="mt-4">
+<h3 class="text-sm font-semibold text-stone-900">Architectural Crystal Cat-Eye</h3>
+<p class="text-[11px] font-mono-spec text-stone-500 mt-0.5">Titan Skeleton • Translucent Form</p>
+</div>
+</div>
+<div class="mt-4 pt-3 border-t border-stone-100">
+<div class="flex items-center justify-between mb-3">
+<span class="text-sm font-bold font-mono-spec text-stone-900">₹2,799</span>
+<span class="text-[10px] font-mono-spec text-stone-500">Lens Included</span>
+</div>
+<div class="grid grid-cols-2 gap-2">
+<button class="py-2 text-[11px] font-mono-spec uppercase border border-stone-300 text-stone-700 rounded hover:bg-stone-100">Details</button>
+<button class="py-2 text-[11px] font-mono-spec uppercase bg-stone-900 text-white rounded hover:bg-stone-800">Add Rx</button>
+</div>
+</div>
+</div>
+<!-- Item 8 -->
+<div class="bg-white border border-stone-200 rounded-xl p-4 flex flex-col justify-between hover:border-stone-400 transition-all duration-200 group">
+<div>
+<div class="flex items-center justify-between text-[10px] font-mono-spec text-stone-400 mb-2">
+<span class="text-stone-700 bg-stone-100 px-1.5 py-0.5 rounded">MATTE BLACK</span>
+<span>54-17-145</span>
+</div>
+<div class="h-44 flex items-center justify-center p-2 bg-stone-50 rounded-lg">
+<img alt="Modern Matte Black Rectangle" class="max-h-full max-w-full object-contain filter group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTyi32B7N5SZuJc2mngJrlaxdy46WlcU6w3sYFN9ASvc7WgdNNqrQdwHuyXrDCGaIZtNU49fLDkezPKgQPzmA13bkb2lDJ606_0AOdmnS6qZMLpoKCbGhHMhXMubD25uVScPYXrmwVmZK6GwfV0lOg7tRbtUN08V0n7l6mjjUUWueSYju38D1_pec1ivmQEivSPhrOuF81nio5zkkNqAkho9JJ6rbfj3ydL4wPZ_NU5PuEzIGXBw">
+</div>
+<div class="mt-4">
+<h3 class="text-sm font-semibold text-stone-900">Modern Matte Black Rectangle</h3>
+<p class="text-[11px] font-mono-spec text-stone-500 mt-0.5">Titan Structure • Reinforced Core</p>
+</div>
+</div>
+<div class="mt-4 pt-3 border-t border-stone-100">
+<div class="flex items-center justify-between mb-3">
+<span class="text-sm font-bold font-mono-spec text-stone-900">₹1,999</span>
+<span class="text-[10px] font-mono-spec text-stone-500">Lens Included</span>
+</div>
+<div class="grid grid-cols-2 gap-2">
+<button class="py-2 text-[11px] font-mono-spec uppercase border border-stone-300 text-stone-700 rounded hover:bg-stone-100">Details</button>
+<button class="py-2 text-[11px] font-mono-spec uppercase bg-stone-900 text-white rounded hover:bg-stone-800">Add Rx</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: FeaturedEyeglassesSection -->
+
+<!-- END: PrescriptionCalloutSection -->
+</main>
+<!-- BEGIN: MainFooter -->
+<footer class="bg-[#070b13] text-gray-400 text-xs mt-14 border-t border-gray-900" data-purpose="site-footer">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-12">
+<!-- Left Brand & Lab Specs -->
+<div class="md:col-span-5 space-y-4">
+<div class="flex items-center space-x-3">
+<div class="w-7 h-7 rounded-full bg-amber-600 text-black flex items-center justify-center font-bold text-xs">
+              TF
+            </div>
+<div>
+<span class="font-serif font-bold text-sm tracking-tight text-white block">MyFrames Precision</span>
+<span class="text-[8px] tracking-[0.2em] uppercase font-semibold text-amber-500 block leading-tight">CERTIFIED OPHTHALMIC LABORATORY</span>
+</div>
+</div>
+<p class="text-xs text-gray-400 max-w-sm leading-relaxed">
+            Medical-grade beta titanium and hand-carved cellulose acetate frames. Engineered with sub-millimeter precision in our certified optical research facility.
+          </p>
+<div class="pt-2 text-[10px] space-y-1">
+<div class="flex items-center text-emerald-400 font-semibold tracking-wider uppercase">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-400 mr-2"></span>
+              SYSTEM STATUS: ALL LABS OPERATIONAL
+            </div>
+<div class="text-gray-500 uppercase tracking-widest text-[9px]">
+              ISO 13485 CERTIFIED
+            </div>
+</div>
+</div>
+<!-- Middle Column 1: Lab Engineering -->
+<div class="md:col-span-2 space-y-3">
+<h4 class="text-[10px] font-bold uppercase tracking-widest text-white">LAB ENGINEERING</h4>
+<ul class="space-y-2 text-xs text-gray-400">
+<li><a class="hover:text-white transition-colors" href="#">0.01mm Laser Precision</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Refractive Index Profiling</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Laser Axis Calibration</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Digital Free-Form Surfacing</a></li>
+</ul>
+</div>
+<!-- Middle Column 2: Customer Support -->
+<div class="md:col-span-2 space-y-3">
+<h4 class="text-[10px] font-bold uppercase tracking-widest text-white">CUSTOMER SUPPORT</h4>
+<ul class="space-y-2 text-xs text-gray-400">
+<li><a class="hover:text-white transition-colors" href="#">Optometrist Video Consultation</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Eyeglasses Fit Guarantee</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Complimentary Frame Adjustments</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Order Tracking &amp; Telemetry</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Titan Optical Lab Network</a></li>
+</ul>
+</div>
+<!-- Right Column: Optical Journal -->
+<div class="md:col-span-3 space-y-3">
+<h4 class="text-[10px] font-bold uppercase tracking-widest text-white">OPTICAL JOURNAL</h4>
+<p class="text-[11px] text-gray-400 leading-snug">
+            Subscribe to receive laboratory dispatch notes, lens tech whitepapers, and seasonal catalog releases.
+          </p>
+<form class="flex items-center gap-1.5 pt-1" onsubmit="event.preventDefault();">
+<input class="bg-gray-900 border border-gray-800 text-xs px-3 py-2 rounded text-gray-200 placeholder-gray-600 focus:outline-none focus:border-amber-500 w-full" placeholder="Enter laboratory email" type="email">
+<button class="bg-amber-600 hover:bg-amber-500 text-black font-bold uppercase text-[10px] tracking-wider px-3 py-2 rounded transition-colors" type="submit">
+              JOIN
+            </button>
+</form>
+</div>
+</div>
+<!-- Copyright & Legal -->
+<div class="mt-12 pt-6 border-t border-gray-900 flex flex-wrap justify-between items-center text-[10px] text-gray-500 gap-4">
+<div>
+          © 2025 TF MyFrames Precision Optics. All rights reserved.
+        </div>
+<div class="flex items-center space-x-6">
+<a class="hover:text-gray-400 transition-colors" href="#">Medical Privacy &amp; HIPAA</a>
+<a class="hover:text-gray-400 transition-colors" href="#">Terms of Bespoke Service</a>
+<a class="hover:text-gray-400 transition-colors" href="#">Laboratory Standards</a>
+</div>
+</div>
+</div>
+</footer>
+<!-- END: MainFooter -->
+
+
+
+
+<div id="snapdom-sandbox" data-snapdom-sandbox="true" aria-hidden="true" style="position: absolute; left: -9999px; top: -9999px; width: 0px; height: 0px; overflow: hidden;"></div></body></html>

@@ -1,0 +1,1277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+
+  <meta
+    content="width=device-width, initial-scale=1.0"
+    name="viewport"
+  >
+
+  <title>MyFrames - Create Account &amp; Join MyFrames</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..700;1,400..700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ['"EB Garamond"', 'serif'],
+            sans: ['"Inter"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+
+          colors: {
+            brand: {
+              charcoal: '#111827',
+              dark: '#080d1a',
+              amber: '#b45309',
+              amberLight: '#d97706',
+              stone: '#f4f3f0',
+              inputBorder: '#d1d5db'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      background-color: #fbfbfa;
+      font-family: 'Inter', sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 4px;
+      height: 4px;
+    }
+
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: #e2e8f0;
+      border-radius: 4px;
+    }
+
+    .card-top-glow {
+      border-top: 3px solid #b45309;
+    }
+
+    .input-field-focus:focus-within {
+      border-color: #b45309;
+      box-shadow: 0 0 0 1px #b45309;
+    }
+  </style>
+</head>
+
+
+<body class="min-h-screen text-slate-800 flex flex-col justify-between">
+
+<div>
+
+  <!-- ==========================================
+       TOP ANNOUNCEMENT BAR
+  =========================================== -->
+
+  <div
+    class="bg-[#0b0f19] text-[#94a3b8] text-[10px] tracking-wider uppercase font-medium py-1.5 px-4 border-b border-gray-800"
+  >
+
+    <div
+      class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2"
+    >
+
+      <div class="flex items-center space-x-2">
+
+        <span class="inline-block w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+
+        <span>
+          TITAN OPTICAL LAB • CERTIFIED • TOLERANCE ±0.01MM • COMPLIMENTARY 1.60 HIGH-INDEX LENSES
+        </span>
+
+      </div>
+
+      <div class="flex items-center space-x-2">
+
+        <span>
+          FREE SHIPPING US &amp; INDIA • ISO 13485 ACCREDITED
+        </span>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- ==========================================
+       NAVIGATION HEADER
+  =========================================== -->
+
+  <header class="bg-white border-b border-gray-200 sticky top-0 z-50">
+
+    <div
+      class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4"
+    >
+
+      <!-- Brand -->
+      <div class="flex items-center space-x-6 flex-shrink-0">
+
+        <a
+          class="flex items-center space-x-2.5"
+          href="/"
+        >
+
+          <div
+            class="w-8 h-8 rounded-full bg-black text-white flex items-center justify-center font-bold text-xs tracking-tighter"
+          >
+            TF
+          </div>
+
+          <div>
+
+            <div
+              class="font-serif font-bold text-base tracking-tight text-gray-900 leading-none"
+            >
+              MyFrames
+            </div>
+
+            <div
+              class="text-[8px] tracking-[0.2em] uppercase font-semibold text-gray-400 leading-tight"
+            >
+              PRECISION OPTICS
+            </div>
+
+          </div>
+
+        </a>
+
+
+        <button
+          class="hidden md:flex items-center space-x-1 text-xs font-semibold tracking-wider text-gray-800 hover:text-black uppercase"
+          type="button"
+        >
+
+          <span>
+            EYEGLASSES
+          </span>
+
+          <svg
+            class="w-3.5 h-3.5 text-gray-500"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+
+            <path
+              d="M19 9l-7 7-7-7"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+            />
+
+          </svg>
+
+        </button>
+
+      </div>
+
+
+      <!-- Search -->
+      <div class="flex-1 max-w-xl mx-2 hidden sm:block">
+
+        <div class="relative">
+
+          <div
+            class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-gray-400"
+          >
+
+            <svg
+              class="w-4 h-4"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+
+              <path
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+
+            </svg>
+
+          </div>
+
+          <input
+            class="w-full pl-10 pr-4 py-2 bg-gray-50 border border-gray-200 rounded-full text-xs placeholder-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-800 focus:bg-white transition-colors"
+            placeholder="Search Titan, Hexagonal, Round, Panto..."
+            type="text"
+          >
+
+        </div>
+
+      </div>
+
+
+      <!-- Wishlist / Cart / Profile -->
+      <div
+        class="flex items-center space-x-4 sm:space-x-6 flex-shrink-0"
+      >
+
+        <a
+          class="flex flex-col items-center group relative text-gray-700 hover:text-black"
+          href="#"
+        >
+
+          <svg
+            class="w-5 h-5 text-gray-700"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+
+            <path
+              d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.8"
+            />
+
+          </svg>
+
+          <span class="text-[9px] font-medium tracking-tight text-gray-500 mt-0.5">
+            WISHLIST
+          </span>
+
+        </a>
+
+
+        <a
+          class="flex flex-col items-center group relative text-gray-700 hover:text-black"
+          href="#"
+        >
+
+          <svg
+            class="w-5 h-5 text-gray-700"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+
+            <path
+              d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.8"
+            />
+
+          </svg>
+
+          <span class="text-[9px] font-medium tracking-tight text-gray-500 mt-0.5">
+            CART
+          </span>
+
+        </a>
+
+
+        <a
+          class="flex flex-col items-center group text-gray-700 hover:text-black"
+          href="#"
+        >
+
+          <svg
+            class="w-5 h-5 text-gray-700"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+
+            <path
+              d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.8"
+            />
+
+          </svg>
+
+          <span class="text-[9px] font-medium tracking-tight text-gray-500 mt-0.5">
+            PROFILE
+          </span>
+
+        </a>
+
+      </div>
+
+    </div>
+
+  </header>
+
+
+  <!-- ==========================================
+       REGISTRATION CARD
+  =========================================== -->
+
+  <main class="py-12 px-4 sm:px-6">
+
+    <div class="max-w-[490px] mx-auto">
+
+      <div
+        class="bg-white rounded-2xl shadow-[0_12px_40px_-15px_rgba(0,0,0,0.07)] border border-gray-100 card-top-glow overflow-hidden"
+      >
+
+        <div class="p-8 sm:p-9 pb-6">
+
+          <!-- Brand Emblem -->
+
+          <div class="flex flex-col items-center text-center">
+
+            <div
+              class="w-12 h-12 rounded-full bg-[#18212f] text-white flex items-center justify-center font-serif text-lg font-medium shadow-inner mb-3"
+            >
+              TF
+            </div>
+
+            <p
+              class="text-[10px] tracking-[0.25em] font-semibold uppercase text-amber-700 font-mono"
+            >
+              PRECISION OPHTHALMICS
+            </p>
+
+            <h1
+              class="text-3xl font-serif text-gray-900 mt-1 mb-1 tracking-tight font-normal"
+            >
+              Join MyFrames
+            </h1>
+
+            <p
+              class="text-xs text-gray-500 max-w-xs leading-relaxed font-light"
+            >
+              Experience bespoke prescription eyewear and precision vision care calibrated to 0.01mm.
+            </p>
+
+          </div>
+
+
+          <!-- ==========================================
+               SIGNUP FORM
+          =========================================== -->
+
+          <form
+            id="signupForm"
+            action="#"
+            class="mt-7 space-y-4"
+            method="POST"
+          >
+
+            <!-- Full Name -->
+
+            <div>
+
+              <label
+                class="block text-[10.5px] font-semibold uppercase tracking-wider text-gray-500 mb-1 font-mono"
+              >
+                Full Name
+              </label>
+
+              <div
+                class="relative flex items-center border border-gray-300 rounded-lg px-3 py-2 bg-gray-50/50 hover:bg-white input-field-focus transition"
+              >
+
+                <svg
+                  class="w-4 h-4 text-gray-400 mr-2.5 shrink-0"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+
+                  <path
+                    d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.8"
+                  />
+
+                </svg>
+
+                <input
+                  id="name"
+                  class="w-full text-xs text-gray-800 bg-transparent border-none p-0 focus:ring-0 focus:outline-none"
+                  type="text"
+                >
+
+              </div>
+
+            </div>
+
+
+            <!-- Email -->
+
+            <div>
+
+              <label
+                class="block text-[10.5px] font-semibold uppercase tracking-wider text-gray-500 mb-1 font-mono"
+              >
+                Email Address
+              </label>
+
+              <div
+                class="relative flex items-center border border-gray-300 rounded-lg px-3 py-2 bg-gray-50/50 hover:bg-white input-field-focus transition"
+              >
+
+                <svg
+                  class="w-4 h-4 text-gray-400 mr-2.5 shrink-0"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+
+                  <path
+                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.8"
+                  />
+
+                </svg>
+
+                <input
+                  id="email"
+                  class="w-full text-xs text-gray-800 bg-transparent border-none p-0 focus:ring-0 focus:outline-none"
+                  type="email"
+                >
+
+              </div>
+
+            </div>
+
+
+            <!-- Phone -->
+
+            <div>
+
+              <label
+                class="block text-[10.5px] font-semibold uppercase tracking-wider text-gray-500 mb-1 font-mono"
+              >
+                Phone Number
+              </label>
+
+              <div
+                class="flex items-center border border-gray-300 rounded-lg bg-gray-50/50 hover:bg-white input-field-focus transition overflow-hidden"
+              >
+
+                <div
+                  class="flex items-center pl-3 pr-2 py-2 border-r border-gray-200 text-xs text-gray-600 bg-gray-100/50 shrink-0 cursor-pointer"
+                >
+
+                  <span class="mr-1 text-xs font-mono font-medium">
+                    +91 (IN)
+                  </span>
+
+                  <svg
+                    class="w-3 h-3 text-gray-500"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+
+                    <path
+                      d="M19 9l-7 7-7-7"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
+
+                  </svg>
+
+                </div>
+
+                <input
+                  id="phone"
+                  class="w-full px-3 py-2 text-xs text-gray-800 bg-transparent border-none focus:ring-0 focus:outline-none"
+                  type="tel"
+                >
+
+              </div>
+
+            </div>
+
+
+            <!-- ==========================================
+                 PASSWORD
+            =========================================== -->
+
+            <div>
+
+              <div class="flex items-center justify-between mb-1">
+
+                <label
+                  class="text-[10.5px] font-semibold uppercase tracking-wider text-gray-500 font-mono"
+                >
+                  Password
+                </label>
+
+                <span class="text-[10.5px] text-gray-500 font-sans">
+                  Strength:
+                  <span class="font-medium text-gray-700">
+                    Atelier Grade
+                  </span>
+                </span>
+
+              </div>
+
+
+              <div
+                class="relative flex items-center border border-gray-300 rounded-lg px-3 py-2 bg-gray-50/50 hover:bg-white input-field-focus transition"
+              >
+
+                <!-- Lock Icon -->
+
+                <svg
+                  class="w-4 h-4 text-gray-400 mr-2.5 shrink-0"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+
+                  <path
+                    d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.8"
+                  />
+
+                </svg>
+
+
+                <input
+                  id="password"
+                  name="password"
+                  class="w-full text-xs text-gray-800 bg-transparent border-none p-0 focus:ring-0 focus:outline-none tracking-widest"
+                  type="password"
+                  autocomplete="new-password"
+                >
+
+
+                <!-- Password Eye -->
+
+                <button
+                  id="togglePassword"
+                  class="text-gray-400 hover:text-gray-600 focus:outline-none ml-2 shrink-0"
+                  type="button"
+                  title="Show or hide password"
+                  aria-label="Show or hide password"
+                >
+
+                  <svg
+                    class="w-4 h-4 pointer-events-none"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+
+                    <path
+                      d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1.8"
+                    />
+
+                    <path
+                      d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1.8"
+                    />
+
+                  </svg>
+
+                </button>
+
+              </div>
+
+            </div>
+
+
+            <!-- ==========================================
+                 CONFIRM PASSWORD
+            =========================================== -->
+
+            <div>
+
+              <div class="flex items-center justify-between mb-1">
+
+                <label
+                  class="text-[10.5px] font-semibold uppercase tracking-wider text-gray-500 font-mono"
+                >
+                  Confirm Password
+                </label>
+
+
+                <!-- Match status -->
+
+                <span
+                  id="passwordMatchStatus"
+                  class="hidden items-center gap-1 text-[10.5px] text-amber-700 font-medium"
+                >
+
+                  <svg
+                    class="w-3 h-3 text-amber-600"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+
+                    <path
+                      clip-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                      fill-rule="evenodd"
+                    />
+
+                  </svg>
+
+                  Passwords match
+
+                </span>
+
+              </div>
+
+
+              <div
+                class="relative flex items-center border border-gray-300 rounded-lg px-3 py-2 bg-gray-50/50 hover:bg-white input-field-focus transition"
+              >
+
+                <!-- Reset Icon -->
+
+                <button
+                  id="resetConfirmPassword"
+                  class="text-gray-400 hover:text-gray-600 focus:outline-none mr-2 shrink-0"
+                  type="button"
+                  title="Reset confirm password"
+                  aria-label="Reset confirm password"
+                >
+
+                  <svg
+                    class="w-4 h-4 pointer-events-none"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+
+                    <path
+                      d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1.8"
+                    />
+
+                  </svg>
+
+                </button>
+
+
+                <!-- Confirm Password -->
+
+                <input
+                  id="confirmPassword"
+                  name="confirmPassword"
+                  class="w-full text-xs text-gray-800 bg-transparent border-none p-0 focus:ring-0 focus:outline-none tracking-widest"
+                  type="password"
+                  autocomplete="new-password"
+                >
+
+
+                <!-- Confirm Password Eye -->
+
+                <button
+                  id="toggleConfirmPassword"
+                  class="text-gray-400 hover:text-gray-600 focus:outline-none ml-2 shrink-0"
+                  type="button"
+                  title="Show or hide confirm password"
+                  aria-label="Show or hide confirm password"
+                >
+
+                  <svg
+                    class="w-4 h-4 pointer-events-none"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+
+                    <path
+                      d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1.8"
+                    />
+
+                    <path
+                      d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1.8"
+                    />
+
+                  </svg>
+
+                </button>
+
+              </div>
+
+            </div>
+
+
+            <!-- Terms -->
+
+            <div class="flex items-start pt-1">
+
+              <div class="flex items-center h-4">
+
+                <input
+                  class="w-4 h-4 text-amber-700 bg-gray-100 border-gray-300 rounded focus:ring-amber-700 focus:ring-offset-0 focus:ring-1"
+                  id="terms"
+                  type="checkbox"
+                >
+
+              </div>
+
+              <label
+                class="ml-2 text-[10.5px] text-gray-600 leading-tight"
+                for="terms"
+              >
+
+                I agree to MyFrames
+
+                <a
+                  class="underline hover:text-black"
+                  href="#"
+                >
+                  Terms of Service
+                </a>,
+
+                <a
+                  class="underline hover:text-black"
+                  href="#"
+                >
+                  Rx Data Privacy
+                </a>,
+
+                and licensed optometric verification protocol.
+
+              </label>
+
+            </div>
+
+
+            <!-- Submit -->
+
+            <div class="pt-2">
+
+              <button
+                class="w-full py-2.5 px-4 bg-[#21262d] hover:bg-[#181d24] text-white text-xs font-semibold rounded-lg shadow transition flex items-center justify-center gap-1.5 tracking-wider uppercase font-mono"
+                type="submit"
+              >
+
+                <span>
+                  CREATE ACCOUNT
+                </span>
+
+                <svg
+                  class="w-3.5 h-3.5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+
+                  <path
+                    d="M14 5l7 7m0 0l-7 7m7-7H3"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  />
+
+                </svg>
+
+              </button>
+
+            </div>
+
+          </form>
+
+
+          <!-- Divider -->
+
+          <div class="relative my-4">
+
+            <div class="absolute inset-0 flex items-center">
+
+              <div class="w-full border-t border-gray-200"></div>
+
+            </div>
+
+            <div
+              class="relative flex justify-center text-[10px] uppercase font-mono"
+            >
+
+              <span class="bg-white px-3 text-gray-400 font-medium">
+                OR REGISTER WITH
+              </span>
+
+            </div>
+
+          </div>
+
+
+          <!-- Google -->
+
+          <button
+            class="w-full py-2 px-4 border border-gray-200 hover:bg-gray-50 rounded-lg text-xs font-medium text-gray-700 flex items-center justify-center gap-2 transition shadow-2xs"
+            type="button"
+          >
+
+            <svg
+              class="w-4 h-4 shrink-0"
+              viewBox="0 0 24 24"
+            >
+
+              <path
+                d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"
+                fill="#4285F4"
+              />
+
+              <path
+                d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"
+                fill="#34A853"
+              />
+
+              <path
+                d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"
+                fill="#FBBC05"
+              />
+
+              <path
+                d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"
+                fill="#EA4335"
+              />
+
+            </svg>
+
+            <span>
+              Continue with Google
+            </span>
+
+          </button>
+
+
+          <!-- Login Redirect -->
+
+          <div class="mt-4 text-center">
+
+            <p class="text-xs text-gray-500">
+
+              Already have an atelier account?
+
+              <a
+                class="text-amber-700 font-medium underline hover:text-amber-800"
+                href="/login"
+              >
+                Log In
+              </a>
+
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <!-- Trust Badges -->
+
+        <div
+          class="bg-gray-50/70 border-t border-gray-100 py-2.5 px-6 flex items-center justify-between text-[10px] text-gray-500 font-mono"
+        >
+
+          <div class="flex items-center gap-1">
+
+            <svg
+              class="w-3 h-3 text-gray-400"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+
+              <path
+                d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+
+            </svg>
+
+            <span>
+              256-Bit SSL Encrypted
+            </span>
+
+          </div>
+
+
+          <div class="flex items-center gap-1">
+
+            <svg
+              class="w-3 h-3 text-gray-400"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+
+              <path
+                d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+
+            </svg>
+
+            <span>
+              OAuth 2.0 Compliant
+            </span>
+
+          </div>
+
+
+          <div class="flex items-center gap-1">
+
+            <svg
+              class="w-3 h-3 text-gray-400"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+
+              <path
+                d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+
+            </svg>
+
+            <span>
+              Rx HIPAA Protected
+            </span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </main>
+
+</div>
+
+
+<!-- ==========================================
+     FOOTER
+=========================================== -->
+
+<footer
+  class="bg-[#070b13] text-gray-400 text-xs mt-14 border-t border-gray-900"
+>
+
+  <div
+    class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12"
+  >
+
+    <div
+      class="grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-12"
+    >
+
+      <!-- Brand -->
+
+      <div class="md:col-span-5 space-y-4">
+
+        <div class="flex items-center space-x-3">
+
+          <div
+            class="w-7 h-7 rounded-full bg-amber-600 text-black flex items-center justify-center font-bold text-xs"
+          >
+            TF
+          </div>
+
+          <div>
+
+            <span
+              class="font-serif font-bold text-sm tracking-tight text-white block"
+            >
+              MyFrames Precision
+            </span>
+
+            <span
+              class="text-[8px] tracking-[0.2em] uppercase font-semibold text-amber-500 block leading-tight"
+            >
+              CERTIFIED OPHTHALMIC LABORATORY
+            </span>
+
+          </div>
+
+        </div>
+
+
+        <p
+          class="text-xs text-gray-400 max-w-sm leading-relaxed"
+        >
+          Medical-grade beta titanium and hand-carved cellulose acetate frames. Engineered with sub-millimeter precision in our certified optical research facility.
+        </p>
+
+
+        <div class="pt-2 text-[10px] space-y-1">
+
+          <div
+            class="flex items-center text-emerald-400 font-semibold tracking-wider uppercase"
+          >
+
+            <span
+              class="w-1.5 h-1.5 rounded-full bg-emerald-400 mr-2"
+            ></span>
+
+            SYSTEM STATUS: ALL LABS OPERATIONAL
+
+          </div>
+
+          <div
+            class="text-gray-500 uppercase tracking-widest text-[9px]"
+          >
+            ISO 13485 CERTIFIED
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- Lab Engineering -->
+
+      <div class="md:col-span-2 space-y-3">
+
+        <h4
+          class="text-[10px] font-bold uppercase tracking-widest text-white"
+        >
+          LAB ENGINEERING
+        </h4>
+
+        <ul class="space-y-2 text-xs text-gray-400">
+
+          <li>
+            <a
+              class="hover:text-white transition-colors"
+              href="#"
+            >
+              0.01mm Laser Precision
+            </a>
+          </li>
+
+          <li>
+            <a
+              class="hover:text-white transition-colors"
+              href="#"
+            >
+              Refractive Index Profiling
+            </a>
+          </li>
+
+          <li>
+            <a
+              class="hover:text-white transition-colors"
+              href="#"
+            >
+              Laser Axis Calibration
+            </a>
+          </li>
+
+          <li>
+            <a
+              class="hover:text-white transition-colors"
+              href="#"
+            >
+              Digital Free-Form Surfacing
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+
+      <!-- Customer Support -->
+
+      <div class="md:col-span-2 space-y-3">
+
+        <h4
+          class="text-[10px] font-bold uppercase tracking-widest text-white"
+        >
+          CUSTOMER SUPPORT
+        </h4>
+
+        <ul class="space-y-2 text-xs text-gray-400">
+
+          <li>
+            <a
+              class="hover:text-white transition-colors"
+              href="#"
+            >
+              Optometrist Video Consultation
+            </a>
+          </li>
+
+          <li>
+            <a
+              class="hover:text-white transition-colors"
+              href="#"
+            >
+              Eyeglasses Fit Guarantee
+            </a>
+          </li>
+
+          <li>
+            <a
+              class="hover:text-white transition-colors"
+              href="#"
+            >
+              Complimentary Frame Adjustments
+            </a>
+          </li>
+
+          <li>
+            <a
+              class="hover:text-white transition-colors"
+              href="#"
+            >
+              Order Tracking &amp; Telemetry
+            </a>
+          </li>
+
+          <li>
+            <a
+              class="hover:text-white transition-colors"
+              href="#"
+            >
+              Titan Optical Lab Network
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+
+      <!-- Optical Journal -->
+
+      <div class="md:col-span-3 space-y-3">
+
+        <h4
+          class="text-[10px] font-bold uppercase tracking-widest text-white"
+        >
+          OPTICAL JOURNAL
+        </h4>
+
+        <p
+          class="text-[11px] text-gray-400 leading-snug"
+        >
+          Subscribe to receive laboratory dispatch notes, lens tech whitepapers, and seasonal catalog releases.
+        </p>
+
+        <form
+          class="flex items-center gap-1.5 pt-1"
+          onsubmit="event.preventDefault();"
+        >
+
+          <input
+            class="bg-gray-900 border border-gray-800 text-xs px-3 py-2 rounded text-gray-200 placeholder-gray-600 focus:outline-none focus:border-amber-500 w-full"
+            placeholder="Enter laboratory email"
+            type="email"
+          >
+
+          <button
+            class="bg-amber-600 hover:bg-amber-500 text-black font-bold uppercase text-[10px] tracking-wider px-3 py-2 rounded transition-colors"
+            type="submit"
+          >
+            JOIN
+          </button>
+
+        </form>
+
+      </div>
+
+    </div>
+
+
+    <!-- Copyright -->
+
+    <div
+      class="mt-12 pt-6 border-t border-gray-900 flex flex-wrap justify-between items-center text-[10px] text-gray-500 gap-4"
+    >
+
+      <div>
+        © 2025 TF MyFrames Precision Optics. All rights reserved.
+      </div>
+
+      <div class="flex items-center space-x-6">
+
+        <a
+          class="hover:text-gray-400 transition-colors"
+          href="#"
+        >
+          Medical Privacy &amp; HIPAA
+        </a>
+
+        <a
+          class="hover:text-gray-400 transition-colors"
+          href="#"
+        >
+          Terms of Bespoke Service
+        </a>
+
+        <a
+          class="hover:text-gray-400 transition-colors"
+          href="#"
+        >
+          Laboratory Standards
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</footer>
+
+
+<!-- ==========================================
+     SIGNUP JAVASCRIPT
+=========================================== -->
+
+<script src="/js/signup.js"></script>
+
+
+</body>
+</html>
